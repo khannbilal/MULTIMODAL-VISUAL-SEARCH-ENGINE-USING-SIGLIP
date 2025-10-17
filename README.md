@@ -1,30 +1,30 @@
 # Multimodal Visual Search Engine Using SigLIP
 
-Overview
+# Overview
 Developed a multimodal retrieval system that aligns textual and visual representations for crossmodal search. The system enables natural languagebased image retrieval from largescale datasets by leveraging SigLIP’s multimodal embeddings and FAISSbased vector indexing for efficient similarity search.
 
-Framework
+# Framework
 Models: SigLIP, FAISS
 Libraries: PyTorch, OpenCV, Transformers, NumPy, Matplotlib
 
-Scope
+# Scope
  Build a texttoimage and imagetotext retrieval system using SigLIP.
  Utilize joint vision–language embeddings for multimodal alignment.
  Implement FAISS for scalable similarity search over large vector spaces.
  Evaluate on Flickr30k and MSCOCO benchmarks.
  Optimize retrieval latency and embedding space coherence.
 
-Datasets Used:
+# Datasets Used:
  Flickr30k: 31,000 images with 5 textual captions each.
  MSCOCO: 120,000 images with multiple humanannotated descriptions.
 
-Preprocessing Steps:
+# Preprocessing Steps:
  Image resizing and normalization (224×224).
  Caption cleaning, tokenization, and lowercasing.
  Embedding extraction for all text–image pairs via SigLIP.
  Normalization and FAISS index construction for retrieval.
 
- Methodology
+ # Methodology
 
  1. Embedding Extraction
 
@@ -48,6 +48,7 @@ Preprocessing Steps:
  Visualized query–retrieval pairs for interpretability and alignment validation.
 
 Architecture (Textual Diagram)
+
             ┌────────────────────────────┐
             │ Input Query (Text or Image)│
             └──────────────┬─────────────┘
@@ -71,34 +72,34 @@ Architecture (Textual Diagram)
           │ Retrieved Results (Topk Images) │
           └─────────────────────────────────┘
 
- Results
+#  Results
 | Dataset   | Metric   | Performance |
 | Flickr30k | Recall@1 | 82%         |
 | Flickr30k | Recall@5 | 92%         |
 | MSCOCO    | Recall@1 | 79%         |
 | MSCOCO    | Recall@5 | 89%         |
 
-Qualitative Findings:
+# Qualitative Findings:
  High precision in retrieval for natural queries (e.g., “a man riding a surfboard”).
  Demonstrated robustness to linguistic paraphrasing.
  Fast retrieval (<150ms per query) using FAISS flat index.
 
-Conclusion
+# Conclusion
 The Multimodal Visual Search Engine effectively bridges text–image understanding via SigLIP’s unified embedding space and FAISSbased nearestneighbor search, achieving 82% Recall@1 on Flickr30k. The system enables natural languagedriven image exploration, supporting applications in visual data management, media analytics, and semantic search engines.
 
-Future Work
+# Future Work
  Integrate crossmodal reranking for semantic refinement.
  Deploy GPUoptimized FAISS clustering for billionscale retrieval.
  Extend to video–text retrieval using framelevel embeddings.
  Experiment with multilingual SigLIP for crosslingual visual search.
 
-References
+# References
 1. Zhai, X. et al. (2023). SigLIP: Scaling VisionLanguage Models with Sigmoid Loss. Google Research.
 2. Radford, A. et al. (2021). Learning Transferable Visual Models From Natural Language Supervision (CLIP). OpenAI.
 3. Johnson, J. et al. (2021). BillionScale Similarity Search with GPUs (FAISS). Facebook AI.
 4. Young, P. et al. (2014). From Image Descriptions to Visual Denotations: Flickr30k Entities. CVPR.
 5. Lin, T.Y. et al. (2014). Microsoft COCO: Common Objects in Context. ECCV.
 
-Closest Research Paper:
+# Closest Research Paper:
 > “SigLIP: Scaling VisionLanguage Models with Sigmoid Loss” — Google Research, 2023.
 > This work forms the theoretical foundation for the project’s multimodal embedding alignment and retrieval mechanism.
