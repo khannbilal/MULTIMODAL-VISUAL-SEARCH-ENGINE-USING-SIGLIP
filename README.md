@@ -47,7 +47,7 @@ Libraries: PyTorch, OpenCV, Transformers, NumPy, Matplotlib
  Metrics: Recall@1, Recall@5, Recall@10, mAP.
  Visualized query–retrieval pairs for interpretability and alignment validation.
 
-Architecture (Textual Diagram)
+# Architecture (Textual Diagram)
 
             ┌────────────────────────────┐
             │ Input Query (Text or Image)│
